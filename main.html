@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="UTF-8">
+	<title>外设适配查询</title>
+	<script src="./node_modules/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head> 
+<body> 
+	<div>
+	<form>
+	<!-- 初始化数据 -->
+	<datalist id="productor_list">
+		<option></option>
+	</datalist>
+	<datalist id="production_num_list">
+	  <option value="-请先选择品牌-" data-id="-1"></option>
+	</datalist>
+	<!-- 表单形式的查询界面 -->
+	<table>
+		<tr>
+			<td>
+				厂家名称：
+			</td>
+			<td>
+				<input list="productor_list" id="productor" class="" onchange="changePr(this.value)">
+			</td>
+			<td>
+				产品型号：
+			</td>
+			<td>
+				<input list="production_num_list" id="production_num" class="">
+			</td>
+			<td>
+				<button type="button" onclick="search()">搜索</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				<hr />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				已适配架构：
+			</td>
+			<td>
+				<input type="text" id="structure" disabled="disabled" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				查询结果：
+			</td>
+			<td colspan="3" >
+				<textarea cols="32" rows="8" id="result" disabled="disabled"></textarea>
+			</td>
+		</tr>
+	</table>	
+	</form>
+	</div> 
+</body> 
+</html>
+
