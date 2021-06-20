@@ -9,8 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head> 
 <body> 
-	<div>
-	<form>
+	<div id="div_form">
+	<div id="div_logo">
+		<img src="images/kylinsoft1.png" width="150px" height="64px"/>
+	</div>
+	<form id="form_search">
 	<!-- 初始化数据 -->
 	<datalist id="productor_list">
 		<option></option>
@@ -19,7 +22,7 @@
 	  <option value="-请先选择品牌-" data-id="-1"></option>
 	</datalist>
 	<!-- 表单形式的查询界面 -->
-	<table>
+	<table id="table_search">
 		<tr>
 			<td>
 				厂家名称：
